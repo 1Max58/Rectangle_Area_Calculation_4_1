@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class RectangleArea {
     private float width = 0;
     private float height = 0;
+    private float area = 0;
 
     public void getData() {
         Scanner input = new Scanner(System.in);
@@ -13,5 +14,13 @@ public class RectangleArea {
         width = input.nextFloat();
         System.out.print("Height = ");
         height = input.nextFloat();
+    }
+
+    public void computeField() {
+        area = width * height;
+    }
+
+    public void fieldDisplay() {
+        System.out.printf("The area of the rectangle %.2f x %.2f is %.2f", width, height, area);
     }
 }

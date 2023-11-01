@@ -5,5 +5,7 @@ public class Main {
         System.out.println("This program will calculate the area of the rectangle.");
         RectangleArea rectangleArea = new RectangleArea();
         rectangleArea.getData();
+        rectangleArea.computeField();
+        rectangleArea.fieldDisplay();
     }
 }
