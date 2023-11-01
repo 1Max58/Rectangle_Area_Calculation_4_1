@@ -7,13 +7,22 @@ public class RectangleArea {
     private float height = 0;
     private float area = 0;
 
-    public void getData() {
+    public boolean getData() {
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter non-negative width and height of the rectangle.");
         System.out.print("Width = ");
         width = input.nextFloat();
+        if (width < 0) {
+            System.out.println("Width cannot be negative");
+            return false;
+        }
         System.out.print("Height = ");
         height = input.nextFloat();
+        if (height < 0) {
+            System.out.println("Height cannot be negative");
+            return false;
+        }
+        return true;
     }
 
     public void computeField() {
